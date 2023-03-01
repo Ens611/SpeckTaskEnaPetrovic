@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="naslov">
+        <p1><b><span>My technologies</span></b></p1>
+    </div>
+    <form action="/index.html"></form>
+    <input type="text" id="Name" name="Name" onfocus=this.value='' maxlength="15" placeholder=" Enter new technology..."
+        style="position:relative; left:350px; top:2px;">
+    <input type="button" id="btn1" value="Add" class="btn1" style="position:relative; left:380px; top: 2px">
+    <input type="text" id="RemoveAll" value="Remove all items" class="RemoveAll" onclick="removeAll()"
+        style="position:relative; left:672px; top: 2px">
+    <div id="div1" style="position:relative; left:350px; top:2px"></div>
+
+    </form>
+
+    <script>
+        const txt1 = document.getElementById('Name');
+        const btn1 = document.getElementById('btn1');
+        const element = document.getElementById("div1");
+
+        function fun1() {
+            const para2 = document.createElement("p");
+            const text = document.createTextNode(txt1.value);
+            para2.appendChild(text);
+            element.appendChild(para2);
+
+        }
+
+        btn1.addEventListener('click', fun1);
+
+        function removeAll() {
+            document.getElementById("div1").innerHTML = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
